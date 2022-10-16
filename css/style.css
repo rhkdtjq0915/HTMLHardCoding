@@ -1,16 +1,23 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
 
 body {
-    color: #949087;
+    color: black;
     font-family: sans-serif;
-    background: #faf6ed ;
+    background-color: #c5c2b8;
 }
 
 section {
     background-color: white;
-    background-repeat: 10px;
-    padding: 40px;
-    margin-bottom: 10px;
+    padding: 1.5rem;
+    border-bottom: 1px outset rgb(190, 190, 190);
     
+}
+
+.in-page{
+    width:120%;
+    margin-right: 30px;
 }
 
 /*
@@ -25,22 +32,25 @@ p {
     padding: 1.5rem;
     background: #fff;
     margin: 0 auto;
+    margin-top: 2rem;
 
 }
 
 /*
 HEADER
-================================================ */
+================================================ 
 header {
     width: 1000px;
     margin: 2.5rem auto 0;
- 
     height: 170px;
 }
+/*
 .page-title {
     font-size: 3.75rem;
     margin: 1rem 0;
     padding-top: 2rem;
+    color:#363636;
+    display:none;
 }
 /*
 .page-text{
@@ -48,14 +58,13 @@ header {
     margin-bottom: 0;
 }
 */
-.page-title,
 .page-text {
     text-align: center;
 }
 
 /*
 MAIN
-================================================ */
+================================================ 
 main {
     margin-bottom: 3rem;
     background: #fff;
@@ -78,10 +87,12 @@ main {
 .post-title a:hover {
     color: #605c55;
 }
+
 .post-thumb {
     position: relative;
 }
-/*.post-date {
+/*
+.post-date {
     font-size: 1.5rem;
     letter-spacing: .1rem;
     background: #93d8d0;
@@ -104,10 +115,10 @@ main {
 }
 */
 .post-img {
-    width: 50px;
-    height:70px;
+    width: 100px;
+    height: auto;
     border-radius: 100px;
-    margin-right: 50px;
+    margin-right: 3rem;
 }
 
 
@@ -120,8 +131,8 @@ table {
 
 th {
     
-text-align: center;
-padding-right: 20px;
+text-align: left;
+padding-right: 30px;
 
 }
 
@@ -131,15 +142,32 @@ th, td{
 
 .myname th {
     display: none;
+    font-size: 2rem;
 }
 
 .myname td {
     display: block;
-    font-size: 18px;
+    font-size: 1.25rem;
     font-weight: bold;
     margin-bottom:10px;
 }
 
+.contact li{
+    list-style: none;
+    margin-left: -2.5rem;
+}
+
+.contact a {
+    text-decoration: none;
+    color:#6b6b6b;
+}
+.contact ul li::before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align:  middle;
+    margin-right: 10px;
+}
 /* 게시글 내부 */
 article h2, h4
 {
@@ -175,10 +203,30 @@ article ol {
     padding: 0;
     
 }
+
+
+article ul li:nth-child(1)::before {
+    content: url('../images/ico_mobile.png');
+
+}
+article ul li:nth-child(2)::before {
+    content: url('../images/ico_email.png');
+
+}
+
+article ul li:nth-child(3)::before {
+    content: url('../images/ico_facebook.png');
+
+}
+
+article ul li:nth-child(4)::before {
+    content: url('../images/ico_blog.png');
+
+}
     
-article li {
+.skills li{
     display: inline-block;
-    background-color: gold;
+    background-color: rgb(252, 225, 175);
     padding: 4px 10px;
     border-radius: 32px;
     margin: 0 8px 8px 0;
@@ -190,10 +238,11 @@ article li::before{
 
 /* 목록 */
 article li {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 /* 인용문 */
+
  blockquote {
     position: relative;
     padding: 1rem 3rem 1rem 3rem;
@@ -219,12 +268,24 @@ blockquote::after {
     right: 0;
 }
 
-.in-page{
-    border: 1px solid rgb(219, 219, 219);
 
-    margin-right: 20px;
+.project video {
+    width: 100%;
 }
 
+.project ol {
+    list-style: none;
+    padding: 0;
+}
+
+.project li {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.project li:last-child {
+    border-bottom: none;
+}
 /*
 ASIDE
 ================================================ */
@@ -232,6 +293,7 @@ aside {
     margin-top: 1rem;
 }
 .side-box {
+    width: 200px;
     margin-bottom: 4rem;
     border: 1px solid #ccc;
     outline: 2px solid #ccc;
@@ -259,7 +321,7 @@ aside {
 
 .side-box-title {
     font-size:1.75rem;
-    background:#aca497;
+    background:#c0ae92;
     color:#fff;
     text-align: center;
 }
@@ -274,9 +336,10 @@ aside {
 
 /* 목록 */
 .side-box li {
-    border-bottom: 1px dashed #ccc;
-    padding: 1rem .25rem;
+    border-bottom: 2px dashed #ccc;
+    padding: 1rem;
     display: flex;
+    margin-right: 2.5rem; 
 }
 .side-box li:first-child {
     padding-top: 0;
@@ -285,19 +348,10 @@ aside {
     padding-bottom: .5rem;
     border-bottom: 0;
 }
-.side-box li::before {
-    display: inline-block;
-    content: '';
-    background: #93d8d0;
-    width: 8px;
-    height: 8px;
-    margin: 10px 15px 0 0;
-    border-radius: 50%;
-}
+
 .side-box li a {
     flex: 2;
     line-height: 3;
-
 }
 
 .side-box p {
@@ -311,7 +365,7 @@ aside {
 
 /* 인기기사 */
 .popular-posts {
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
 }
 
 /* 폼 */
@@ -320,7 +374,7 @@ aside {
     margin-top: 1.5rem;
 }
 .newsletter-form input[type='email'] {
-    border: 2px solid #ccc;
+    border: 3px solid #ccc;
     border-radius: 10px 0 0 10px;
     background: #fff;
     padding: 1rem;
@@ -330,7 +384,7 @@ aside {
     color: #ccc;
 }
 .newsletter-form input[type='submit'] {
-    background: #eda1a1;
+    background: #eecca8;
     border-radius: 0 10px 10px 0;
     color: #fff;
     cursor: pointer;
@@ -341,32 +395,11 @@ aside {
     background: #e38787;
 }
 
-ul li:nth-child(1)::before {
-    content: url('../images/ico_mobile.png');
-
-}
-
-ul li:nth-child(2)::before {
-    content: url('../images/ico_email.png');
-
-}
-
-ul li:nth-child(3)::before {
-    content: url('../images/ico_facebook.png');
-
-}
-
-ul li:nth-child(4)::before {
-    content: url('../images/ico_blog.png');
-
-}
-
-
 /*
 FOOTER
 ================================================ */
 footer {
-    background: #949087;
+    background: #979797;
     text-align: center;
     padding: 3rem;
 }
@@ -377,6 +410,7 @@ footer ul {
 }
 footer li {
     margin: 0 12px;
+    list-style: none;
 }
 footer a {
     color: #fff;
@@ -415,7 +449,7 @@ DESKTOP SIZE
 
     /* Main */
     main {
-        width: 68%;
+        width: 100%;
         margin-bottom: 0;
     }
     .post-thumb {
@@ -423,8 +457,10 @@ DESKTOP SIZE
         float: left;
     }
     .post-img {
-        width: 200px;
-        height: 200px;
+        width: 110px;
+        height: 110px;
+        margin-bottom: 4rem;
+
     }
 
     /* Aside */
@@ -435,6 +471,6 @@ DESKTOP SIZE
     /* 인기기사 */
     .popular-posts {
         position: sticky;
-        top: 1rem;
+        top: 2rem;
     }
 }
