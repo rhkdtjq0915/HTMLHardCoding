@@ -1,1 +1,1 @@
-[<http://example.com/>](https://rhkdtjq.netlify.app/)
+<https://rhkdtjq.netlify.app/>
